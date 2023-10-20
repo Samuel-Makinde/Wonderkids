@@ -18,8 +18,7 @@ const fileSchema = new Schema({
         type: Date,
         default: Date.now,
     },
-});
-
+})
 const File = mongoose.model("File", fileSchema);
 
 module.exports = File
