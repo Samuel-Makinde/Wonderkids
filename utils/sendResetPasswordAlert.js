@@ -1,7 +1,7 @@
 const sendEmail = require('./sendEmail');
 
 const sendResetPasswordAlert = async (
-    { username, email, token,  }
+    { username, email, token, }
 ) => {
     const resetURL = `${origin}/user/reset-password?token=${token}&email=${email}`;
 
@@ -10,7 +10,7 @@ const sendResetPasswordAlert = async (
 
     return sendEmail({
         to: email,
-        subject: 'EaseReads Reset Password',
+        subject: 'Wonderkidz Reset Password',
         html: `<h4> Hello, ${username}</h4>
     ${message}
     `,

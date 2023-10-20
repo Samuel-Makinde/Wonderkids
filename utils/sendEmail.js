@@ -6,7 +6,7 @@ const sendEmail = async ({ html, to, subject }) => {
 
     try {
         const info = await transporter.sendMail({
-            from: `"EaseReads" <easereadscare@gmail.com>`,
+            from: `"Wonderkidz" `,
             html,
             to,
             subject

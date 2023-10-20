@@ -13,7 +13,7 @@ const sendVerificationEmail = async ({
 
     return sendEmail({
         to: email,
-        subject: 'EaseReads Email Confirmation',
+        subject: 'WonderKidz Email Confirmation',
         html: `<h4> Hello, ${username}</h4>
     ${message}
     `,

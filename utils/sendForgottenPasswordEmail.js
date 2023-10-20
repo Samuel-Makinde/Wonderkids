@@ -10,7 +10,7 @@ const sendForgotPasswordEmail = async (
 
     return sendEmail({
         to: email,
-        subject: 'EaseReads Reset Password',
+        subject: 'Wonderkidz Reset Password',
         html: `<h4> Hello, ${username}</h4>
     ${message}
     `,

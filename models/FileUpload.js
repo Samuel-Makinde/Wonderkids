@@ -10,13 +10,9 @@ const fileSchema = new Schema({
         type: String,
         required: true,
     },
-    image: {
-        filename: String,
-        filePath: String,
-    },
-    pdf: {
-        filename: String,
-        filePath: String,
+    path: {
+        type: String,
+        required: true,
     },
     uploadedAt: {
         type: Date,

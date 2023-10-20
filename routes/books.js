@@ -3,12 +3,10 @@ const router = express.Router()
 
 const authenticatedUser = require("../middleware/authentication")
 const files = require("../controllers/Books")
-const getABook = require("../controllers/GetAbook")
 const preventHotLinking = require("../middleware/preventHotlinking")
 
 
-router.get('/files', authenticatedUser, files);
-router.get('/files/:fileId', preventHotLinking("https://easereads.com"), getABook);
+router.get('/files', authenticatedUser, preventHotLinking("http://localhost:5173"), files);
 
 
 module.exports = router

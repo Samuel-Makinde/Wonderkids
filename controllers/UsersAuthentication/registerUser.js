@@ -36,8 +36,8 @@ const createNewUser = async (req, res) => {
     try {
         const hashedpassword = await bcrypt.hash(password, 10)
         const verificationToken = crypto.randomBytes(40).toString('hex')
-        const isFirstFourUsers = (await User.countDocuments({})) < 4;
-        const role = isFirstFourUsers ? 'admin' : 'user'
+        const isFirstTwoUsers = (await User.countDocuments({})) < 2;
+        const role = isFirstTwoUsers ? 'admin' : 'user'
 
         const user = await User.create({
             username,
@@ -49,7 +49,7 @@ const createNewUser = async (req, res) => {
             verificationToken,
 
         })
-        const origin = 'https://easereads.com';
+        const origin = process.env.ORIGIN;
 
         // to send email verification
         await sendVerificationEmail({

@@ -39,7 +39,7 @@ const resendEmail = async (req, res) => {
         user.verificationToken = NewverificationToken
         await user.save()
         // to send email verification
-        const origin = 'https://easereads.com';
+        const origin = process.env.ORIGIN;
         await sendVerificationEmail({
             username: user.username,
             email: user.email,
