@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: white;
+} */
+
+/* .imageContainer {
+    width: 98%;
+    height: 300px;
+    padding-left: 10px;
+}
+
+@media screen and (min-width:800px) {
+    .imageContainer {
+        
+        height: 750px;
+        padding-left: 0px;
+    }
+} */
