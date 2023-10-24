@@ -1,4 +1,4 @@
-const whiteList = ["https://wonderkid.live/", "https://www.wonderkid.live", "http://localhost:5173"]
+const whiteList = ["https://wonderkid.live", "https://www.wonderkid.live", "http://localhost:5173"]
 
 const corsOptions = {
     origin: (origin, callback) => {
