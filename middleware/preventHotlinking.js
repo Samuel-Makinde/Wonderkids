@@ -1,9 +1,8 @@
-const preventHotLinking = (allowedDomain) => {
+const preventHotLinking = (allowedDomains) => {
     return (req, res, next) => {
         const referer = req.get('referer');
 
-        // Check if referer header is missing or doesn't match your domain
-        if (!referer || !referer.includes(allowedDomain)) {
+        if (!referer || !allowedDomains.some(domain => referer.includes(domain))) {
             return res.status(403).json({ error: 'Forbidden' });
         }
 
