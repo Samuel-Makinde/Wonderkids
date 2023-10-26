@@ -49,7 +49,7 @@ const createNewUser = async (req, res) => {
             verificationToken,
 
         })
-        const origin = process.env.ORIGIN;
+        const origin = "https://wonderkid.live";
 
         // to send email verification
         await sendVerificationEmail({
